@@ -1,0 +1,85 @@
+  [1m[36mAlbum Load (2.7ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+SQLite3::SQLException: no such table: albums: SELECT "albums".* FROM "albums"
+  [1m[36m (96.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (55.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateAlbums (20151101132321)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "release_year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151101132321"]]
+  [1m[35m (63.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (76.7ms)[0m  [1mDROP TABLE "albums"[0m
+  [1m[35m (52.2ms)[0m  CREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "release_year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (50.4ms)[0m  CREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "release_year" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (54.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (71.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (67.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151101132321')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "albums" ("name", "release_year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "album 1"], ["release_year", 1966], ["created_at", "2015-11-01 13:27:07.154627"], ["updated_at", "2015-11-01 13:27:07.154627"]]
+  [1m[36m (55.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "albums" ("name", "release_year", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "album 3"], ["release_year", 1968], ["created_at", "2015-11-01 13:27:07.222694"], ["updated_at", "2015-11-01 13:27:07.222694"]]
+  [1m[35m (53.8ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "albums" ("name", "release_year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "album A"], ["release_year", 1977], ["created_at", "2015-11-01 13:27:07.286362"], ["updated_at", "2015-11-01 13:27:07.286362"]]
+  [1m[36m (63.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mAlbum Load (4.1ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mAlbum Load (0.8ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 1977]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAlbum Load (0.6ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 199]]
+  [1m[35mAlbum Exists (0.6ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = ?  [["id", 1977]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."release_year" = ?[0m  [["release_year", 1977]]
+  [1m[35mAlbum Load (0.4ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."release_year" = ?  [["release_year", 197]]
+  [1m[36mAlbum Load (0.8ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."release_year" = ? LIMIT 1[0m  [["release_year", 1977]]
+  [1m[35mAlbum Load (0.4ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."release_year" = ? LIMIT 1  [["release_year", 197]]
+  [1m[36mAlbum Load (0.5ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."release_year" = ? LIMIT 1[0m  [["release_year", 1977]]
+  [1m[35mAlbum Load (0.8ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? AND "albums"."release_year" = ? LIMIT 1  [["id", 3], ["release_year", 1977]]
+  [1m[36mAlbum Load (0.4ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? AND "albums"."release_year" = ? LIMIT 1[0m  [["id", 33], ["release_year", 1977]]
+  [1m[35mAlbum Load (2.5ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."name" = ? LIMIT 1  [["name", "Album XX"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "albums" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Album XX"], ["created_at", "2015-11-01 13:33:47.855413"], ["updated_at", "2015-11-01 13:33:47.855413"]]
+  [1m[36m (60.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."name" = ? AND "albums"."release_year" = ? LIMIT 1  [["name", "Album XXx"], ["release_year", 2000]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "albums" ("name", "release_year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Album XXx"], ["release_year", 2000], ["created_at", "2015-11-01 13:34:42.156512"], ["updated_at", "2015-11-01 13:34:42.156512"]]
+  [1m[36m (56.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mAlbum Load (1.1ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."id" DESC LIMIT 1
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."release_year" = ? LIMIT 1[0m  [["release_year", 1999]]
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."release_year" = ? LIMIT 1  [["release_year", nil]]
+  [1m[36mAlbum Load (0.5ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."release_year" = ? LIMIT 1[0m  [["release_year", nil]]
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT "albums".* FROM "albums" WHERE ("albums"."release_year" BETWEEN 199 AND 1999)
+  [1m[36mAlbum Load (0.5ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."release_year" = ?[0m  [["release_year", 1999]]
+  [1m[35mAlbum Load (0.8ms)[0m  SELECT "albums".* FROM "albums" WHERE (release_year > 1999)
+  [1m[36mAlbum Load (0.9ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (release_year > 199)[0m
+  [1m[35mAlbum Load (0.8ms)[0m  SELECT "albums".* FROM "albums" WHERE (name like '%xx%' AND release_year > 199)
+  [1m[36mAlbum Load (0.8ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (name like '%x%' AND release_year > 199)[0m
+  [1m[35mAlbum Load (0.9ms)[0m  SELECT "albums".* FROM "albums" WHERE (name like '%x%' OR release_year > 199)
+  [1m[36mAlbum Load (0.9ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199)[0m
+  [1m[35mAlbum Load (0.8ms)[0m  SELECT "albums".* FROM "albums" WHERE (name like '%X%' AND release_year > 199)
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199)[0m
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199)  ORDER BY "albums"."id" ASC
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199)  ORDER BY "albums"."name" ASC[0m
+  [1m[35mAlbum Load (0.8ms)[0m  SELECT  "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199) LIMIT 2
+  [1m[36mAlbum Exists (1.1ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199) AND "albums"."id" = ?[0m  [["id", 1]]
+  [1m[35mAlbum Exists (0.5ms)[0m  SELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199) AND "albums"."id" = ?  [["id", 1]]
+  [1m[36mAlbum Exists (0.5ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199) AND "albums"."id" = ?[0m  [["id", 0]]
+  [1m[35mAlbum Exists (1.0ms)[0m  SELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199) AND "albums"."id" = ?  [["id", 0]]
+  [1m[36mAlbum Exists (0.5ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE (name like '%X%' OR release_year > 199) AND "albums"."id" = ?[0m  [["id", 1]]
+  [1m[35mAlbum Load (1.0ms)[0m  SELECT "albums".* FROM "albums" GROUP BY release_year
+  [1m[36m (0.9ms)[0m  [1mSELECT "albums"."name" FROM "albums" GROUP BY release_year[0m
+  [1m[35m (0.8ms)[0m  SELECT "albums"."name" FROM "albums" GROUP BY release_year
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT "albums".* FROM "albums" GROUP BY release_year[0m
+  [1m[35mAlbum Load (0.7ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.7ms)[0m  UPDATE "albums" SET "name" = ?, "updated_at" = ? WHERE "albums"."id" = ?  [["name", "Album1 edit"], ["updated_at", "2015-11-01 13:46:22.849108"], ["id", 1]]
+  [1m[36m (66.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mAlbum Load (0.9ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."id" ASC LIMIT 1
+  [1m[36mAlbum Load (0.8ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."id" ASC LIMIT 1[0m
+  [1m[36mAlbum Load (6.3ms)[0m  [1mSELECT "albums".* FROM "albums"[0m

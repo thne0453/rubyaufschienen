@@ -1,0 +1,90 @@
+  [1m[36m (67.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  select sqlite_version(*)
+  [1m[36m (60.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateBooks (20151101141456)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151101141456"]]
+  [1m[35m (46.0ms)[0m  commit transaction
+Migrating to CreateAuthors (20151101141523)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_id" integer, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151101141523"]]
+  [1m[35m (60.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (92.7ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_id" integer, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (50.4ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (54.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (59.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (55.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151101141523')[0m
+  [1m[35m (57.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151101141456')
+  [1m[36m (47.2ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_id" integer, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (55.7ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (54.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (53.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (46.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151101141523')[0m
+  [1m[35m (59.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151101141456')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "books" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Neuromancer"], ["created_at", "2015-11-01 14:18:02.993544"], ["updated_at", "2015-11-01 14:18:02.993544"]]
+  [1m[36m (62.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "authors" ("book_id", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["book_id", 1], ["first_name", "William"], ["last_name", "Gibson"], ["created_at", "2015-11-01 14:19:12.628121"], ["updated_at", "2015-11-01 14:19:12.628121"]]
+  [1m[35m (52.2ms)[0m  commit transaction
+  [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (66.1ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_id" integer, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (66.8ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (45.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (48.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (56.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151101141523')[0m
+  [1m[35m (58.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151101141456')
+  [1m[36m (51.4ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "book_id" integer, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (64.1ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (78.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (57.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (54.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151101141523')[0m
+  [1m[35m (67.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151101141456')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "books" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Neuromancer"], ["created_at", "2015-11-01 14:21:20.873810"], ["updated_at", "2015-11-01 14:21:20.873810"]]
+  [1m[36m (55.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "authors" ("first_name", "last_name", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "William"], ["last_name", "Gibson"], ["book_id", 1], ["created_at", "2015-11-01 14:23:26.357769"], ["updated_at", "2015-11-01 14:23:26.357769"]]
+  [1m[35m (60.5ms)[0m  commit transaction
+  [1m[36mBook Load (0.8ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "books" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Snowcrash"], ["created_at", "2015-11-01 14:24:54.869569"], ["updated_at", "2015-11-01 14:24:54.869569"]]
+  [1m[36m (64.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "authors" ("first_name", "last_name", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Neal"], ["last_name", "Stephenson"], ["book_id", 2], ["created_at", "2015-11-01 14:24:54.949938"], ["updated_at", "2015-11-01 14:24:54.949938"]]
+  [1m[35m (45.3ms)[0m  commit transaction
+  [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "books" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Cryptonomicon"], ["created_at", "2015-11-01 14:27:12.228808"], ["updated_at", "2015-11-01 14:27:12.228808"]]
+  [1m[36m (47.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (1.4ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."book_id" = ?  [["book_id", 3]]
+  [1m[36mBook Load (0.7ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "books" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Snowcrash"], ["created_at", "2015-11-01 14:32:17.741499"], ["updated_at", "2015-11-01 14:32:17.741499"]]
+  [1m[36m (57.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "authors" SET "book_id" = ?, "updated_at" = ? WHERE "authors"."id" = ?  [["book_id", 4], ["updated_at", "2015-11-01 14:32:17.828442"], ["id", 2]]
+  [1m[36m (46.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."book_id" = ?  [["book_id", 4]]
+  [1m[36mAuthor Load (0.8ms)[0m  [1mSELECT "authors".* FROM "authors"[0m

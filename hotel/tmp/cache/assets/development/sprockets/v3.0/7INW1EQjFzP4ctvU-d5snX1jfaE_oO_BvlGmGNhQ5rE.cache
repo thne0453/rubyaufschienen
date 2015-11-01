@@ -1,0 +1,16 @@
+I"ƒ(function() {
+  jQuery(function() {
+    $('#second_name').hide();
+    return $('#reservation_room_type').change(function() {
+      var room_type;
+      room_type = $('#reservation_room_type :selected').text();
+      if (room_type === 'Einzelzimmer') {
+        return $('#second_name').hide();
+      } else {
+        return $('#second_name').show();
+      }
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @cancellor.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @cancellor.last_name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @cancellor.birthday %>
+</p>
+
+<%= link_to 'Edit', edit_cancellor_path(@cancellor) %> |
+<%= link_to 'Back', cancellors_path %>

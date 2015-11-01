@@ -1,0 +1,76 @@
+  [1m[36m (80.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (48.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateCancellors (20151101150951)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "cancellors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "birthday" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151101150951"]]
+  [1m[35m (65.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "cancellors" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Konrad"], ["last_name", "Adenauer"], ["birthday", "1876-01-05"], ["created_at", "2015-11-01 15:33:31.002069"], ["updated_at", "2015-11-01 15:33:31.002069"]]
+  [1m[35m (61.9ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "cancellors" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Ludwig"], ["last_name", "Erhard"], ["birthday", "1897-02-04"], ["created_at", "2015-11-01 15:33:31.083710"], ["updated_at", "2015-11-01 15:33:31.083710"]]
+  [1m[36m (53.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "cancellors" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Kurt Georg"], ["last_name", "Kiesinger"], ["birthday", "1904-04-06"], ["created_at", "2015-11-01 15:33:31.147066"], ["updated_at", "2015-11-01 15:33:31.147066"]]
+  [1m[35m (51.6ms)[0m  commit transaction
+
+
+Started GET "/cancellors" for 127.0.0.1 at 2015-11-01 16:34:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CancellorsController#index as HTML
+  [1m[35mCancellor Load (0.5ms)[0m  SELECT "cancellors".* FROM "cancellors"
+  Rendered cancellors/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 3274ms (Views: 3213.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/cancellors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-01 16:35:01 +0100
+
+
+Started GET "/assets/scaffolds.self-29377441463cf0c8b7b68fa88ecd29a467bb0345442993cadbb1ba50bc480531.css?body=1" for 127.0.0.1 at 2015-11-01 16:35:01 +0100
+
+
+Started GET "/assets/cancellors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-01 16:35:01 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-01 16:35:01 +0100
+
+
+Started GET "/cancellors/2/edit" for 127.0.0.1 at 2015-11-01 16:35:55 +0100
+Processing by CancellorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCancellor Load (0.6ms)[0m  [1mSELECT  "cancellors".* FROM "cancellors" WHERE "cancellors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered cancellors/_form.html.erb (103.4ms)
+  Rendered cancellors/edit.html.erb within layouts/application (128.3ms)
+Completed 200 OK in 327ms (Views: 278.8ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/cancellors/2" for 127.0.0.1 at 2015-11-01 16:36:06 +0100
+Processing by CancellorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"acYwU+SiraJAYBU8F+uEi5WsksTOliCTzw3fJCg0Ri2MbT9TheWTF5TZvyPDmSlKxV0+1Km0krHhQWeVbp74yg==", "cancellor"=>{"first_name"=>"Ludwig, \"luddi\"", "last_name"=>"Erhard", "birthday(1i)"=>"1897", "birthday(2i)"=>"2", "birthday(3i)"=>"4"}, "commit"=>"Update Cancellor", "id"=>"2"}
+  [1m[35mCancellor Load (0.5ms)[0m  SELECT  "cancellors".* FROM "cancellors" WHERE "cancellors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (17.8ms)[0m  UPDATE "cancellors" SET "first_name" = ?, "updated_at" = ? WHERE "cancellors"."id" = ?  [["first_name", "Ludwig, \"luddi\""], ["updated_at", "2015-11-01 15:36:07.032115"], ["id", 2]]
+  [1m[36m (106.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/cancellors/2
+Completed 302 Found in 152ms (ActiveRecord: 125.3ms)
+
+
+Started GET "/cancellors/2" for 127.0.0.1 at 2015-11-01 16:36:07 +0100
+Processing by CancellorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCancellor Load (0.4ms)[0m  SELECT  "cancellors".* FROM "cancellors" WHERE "cancellors"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered cancellors/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 120ms (Views: 112.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cancellors" for 127.0.0.1 at 2015-11-01 16:36:09 +0100
+Processing by CancellorsController#index as HTML
+  [1m[36mCancellor Load (0.6ms)[0m  [1mSELECT "cancellors".* FROM "cancellors"[0m
+  Rendered cancellors/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 115ms (Views: 112.1ms | ActiveRecord: 0.6ms)

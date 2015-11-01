@@ -1,0 +1,162 @@
+
+
+Started GET "/game/ping" for 127.0.0.1 at 2015-10-31 21:11:22 +0100
+Processing by GameController#ping as HTML
+++++++++ test ping +++++++++++++++
+Redirected to http://0.0.0.0:3000/game/pong
+Completed 302 Found in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/game/pong" for 127.0.0.1 at 2015-10-31 21:11:23 +0100
+Processing by GameController#pong as HTML
+++++++++ test pong ++++++++++++++
+  Rendered game/pong.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 2973ms (Views: 2971.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-31 21:11:26 +0100
+
+
+Started GET "/assets/game.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-31 21:11:26 +0100
+
+
+Started GET "/game/pong" for 127.0.0.1 at 2015-10-31 21:15:20 +0100
+Processing by GameController#pong as HTML
+++++++++ test pong ++++++++++++++
+  Rendered game/pong.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 25ms
+
+SyntaxError (/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+</body>
+ ^
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:17: unknown regexp options - htl
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: unterminated string meets end of file
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:17: unknown regexp options - htl
+  app/views/layouts/application.html.erb:18: unterminated string meets end of file
+  app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.4ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.0ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.2ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.8ms)
+
+
+Started GET "/game/ping" for 127.0.0.1 at 2015-10-31 21:15:28 +0100
+Processing by GameController#ping as HTML
+++++++++ test ping +++++++++++++++
+Redirected to http://0.0.0.0:3000/game/pong
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/game/pong" for 127.0.0.1 at 2015-10-31 21:15:28 +0100
+Processing by GameController#pong as HTML
+++++++++ test pong ++++++++++++++
+  Rendered game/pong.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+</body>
+ ^
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:17: unknown regexp options - htl
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: unterminated string meets end of file
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:17: unknown regexp options - htl
+  app/views/layouts/application.html.erb:18: unterminated string meets end of file
+  app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.7ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.3ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (90.1ms)
+
+
+Started GET "/game/pong" for 127.0.0.1 at 2015-10-31 21:17:05 +0100
+Processing by GameController#pong as HTML
+++++++++ test pong ++++++++++++++
+  Rendered game/pong.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 14ms
+
+SyntaxError (/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+</body>
+ ^
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:17: unknown regexp options - htl
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: unterminated string meets end of file
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:17: unknown regexp options - htl
+  app/views/layouts/application.html.erb:18: unterminated string meets end of file
+  app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (26.2ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.4ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.4ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.5ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.7ms)
+
+
+Started GET "/game/pong" for 127.0.0.1 at 2015-10-31 21:17:43 +0100
+Processing by GameController#pong as HTML
+++++++++ test pong ++++++++++++++
+  Rendered game/pong.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+</body>
+ ^
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:17: unknown regexp options - htl
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: unterminated string meets end of file
+/home/toxo/Dokumente/ruby/rubyaufschienen/redirect_example/app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/layouts/application.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:17: unknown regexp options - htl
+  app/views/layouts/application.html.erb:18: unterminated string meets end of file
+  app/views/layouts/application.html.erb:18: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.6ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.8ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.2ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/toxo/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.4ms)
+
+
+Started GET "/game/pong" for 127.0.0.1 at 2015-10-31 21:18:39 +0100
+Processing by GameController#pong as HTML
+++++++++ test pong ++++++++++++++
+  Rendered game/pong.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 0.0ms)
